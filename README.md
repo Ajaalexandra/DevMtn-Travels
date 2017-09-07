@@ -1,13 +1,13 @@
 ## DevMtn-Travels
 
-### Objective
+<!-- ### Objective
 
 ####
 Create an Angular application that uses routes to navigate through a travel site. You will be able to use routes and sub routes by the end of this project.
-In this repo, you'll continue to practice fundamental Angular principles you've learned like controller and services.
+In this repo, you'll continue to practice fundamental Angular principles you've learned like controller and services. -->
 
 
-
+<!--
 ### Application Design
 
 ####
@@ -30,9 +30,9 @@ For this project you're going to need to serve your files through a live-server
   The line after should print out: `Starting ... at http://127.0.0.1:8080`
 * Go to http://localhost:8080 in your browser. You should see the initial state of your application.
 
-**Note** If your text editor supports its own live-server package, install the package and run live-server directly from your editor.
+**Note** If your text editor supports its own live-server package, install the package and run live-server directly from your editor. -->
 
-
+<!--
 ### Review the Existing Repo Code
 
 ####
@@ -67,12 +67,12 @@ The router is going to take that element and inject certain templates (html page
 The template that is injected into the &lt;ui-view></ui-view&gt; element depends entirely on what we specify in using the `$stateProvider` object in our app.js file.
 Creating a router this way allows us to dynamically switch templates and controllers based on the URL.
 
-Once you feel VERY comfortable with the existing codebase, move on to the next step.
+Once you feel VERY comfortable with the existing codebase, move on to the next step. -->
 
 ### Configure the Router
 
 ####
-
+<!--
 In this step, we need to set up five more state views in our app.js.
 Go ahead and add the following state views.
 
@@ -156,23 +156,23 @@ The contact.html and the about-adventurers.html are both sub routes to the home 
                 templateUrl: "../views/locations.html"
 
             });
-```
+``` -->
 
 
 ### Controller Setup
 
 ####
-
+<!--
 Next, go ahead and create a controller for the packages, booked, and locations views
 
 Create three new files, which are listed below, and place them in the controllers folder.
 
 * locationsCtrl.js
 * packagesCtrl.js
-* bookedCtrl.js
+* bookedCtrl.js -->
 
 
-Make sure that $scope and mainSrv are injected into each of the controllers. And before we get started, let's make sure that the controllers have been added to your index.html in a script source tag.
+<!-- Make sure that $scope and mainSrv are injected into each of the controllers. And before we get started, let's make sure that the controllers have been added to your index.html in a script source tag. -->
 
 
 
@@ -180,7 +180,7 @@ Make sure that $scope and mainSrv are injected into each of the controllers. And
 
 Now that we have created our controllers and added the script tags to the index.html we need to tell the router what controller it needs to use. On the packages, booked and location states add a controller property with the value as whatever you named the associated controller.
 Now when you navigate to a view the router will know what controller it needs to be using
-
+<!--
 ####
 ```javascript
    $stateProvider
@@ -212,25 +212,10 @@ Now when you navigate to a view the router will know what controller it needs to
                 url:'/locations',
                 templateUrl: "../views/locations.html",
                 controller: 'locationsCtrl'
-            });
+            }); -->
 ```
 ### Test Controllers
 
-####
-
-Create a test variable in your controller called $scope.test and give it some value. In the associated template file that you created in the last step, put {{test}} somewhere in the file. Make sure that the value that you gave to $scope.test pops up on the view.
-
-
-### Setup the templates
-
-####
-
-Now that our templates and controllers have been injected into each of the states, we need to add some markup to the templates to get them to work.
-
-Go ahead to your browser and test your content. Now that we have created templates that are linked to the state config, we should be able to see them appear when the url has an appropriate extension.
-For example use the following url extension to test the packages page : http://localhost:8080/#/packages.
-
-If everything works correctly, go through the index.html file and the template files, and add any ui-sref attributes that would be necessary to connect to the different views. The templates we need to make changes to are the booked.html,locations.html and the packages.html. Open up those files and you will see comments guiding you through the steps
 
 
 
